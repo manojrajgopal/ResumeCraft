@@ -1,0 +1,73 @@
+/* components/AuthModal.css */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.auth-tabs {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-tabs li {
+  margin-right: 1rem;
+}
+
+.auth-tabs button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.auth-tabs li.active button {
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-body .form-group {
+  margin-bottom: 1rem;
+}
+
+.modal-body .form-check {
+  margin-bottom: 1.5rem;
+}

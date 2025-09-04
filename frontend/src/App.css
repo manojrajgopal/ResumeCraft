@@ -1,0 +1,110 @@
+/* App.css */
+:root {
+  --primary: #4361ee;
+  --secondary: #3a0ca3;
+  --accent: #f72585;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --success: #4cc9f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7ff;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  border: none;
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+  cursor: pointer;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,282 @@
+/* components/ResumeForm.css */
+.resume-form {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  height: 100%;
+}
+
+.form-sections {
+  display: flex;
+  background: #f8fafc;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.section-tab {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-tab:hover {
+  color: #4361ee;
+  background: rgba(67, 97, 238, 0.08);
+}
+
+.section-tab.active {
+  background: white;
+  color: #4361ee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-content {
+  padding: 1.5rem;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.form-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.form-content::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 10px;
+}
+
+.form-content::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+.form-section {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.section-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 1.5rem 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.item-card {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 1.25rem;
+  border-left: 4px solid #4361ee;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.item-number {
+  background: #4361ee;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: #4361ee;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #3a56d4;
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: #4361ee;
+  border: 1px solid #4361ee;
+}
+
+.btn-outline-primary:hover {
+  background: #4361ee;
+  color: white;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+.btn-icon {
+  padding: 0.4rem;
+  border-radius: 6px;
+  min-width: auto;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ff;
+  color: #4338ca;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.skill-tag button {
+  background: transparent;
+  color: #4338ca;
+  border: none;
+  cursor: pointer;
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.skill-tag button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #94a3b8;
+}
+
+.empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .form-sections {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .skills-grid {
+    justify-content: center;
+  }
+}
